@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/fridge_favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:ital,wght@0,100;0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/index.js" type="module"></script>
+    <title>What To Cook...</title>
+  </head>
+  <body id="root">
+    <header>
+      <div class="logoTitle">
+        <img src="./assets/fridge_logo.png" alt="friday logo" />
+        <h1>What to cook...</h1>
+      </div>
+      <small>Samuel Sheppard 2022</small>
+    </header>
+    <div class="banner">
+      <p>
+        Look what you have in your fridge, pantry or freezer and enter it in to
+        the search bar below. If you make a mistake, click the item to remove
+        it. Once you click search, it will display a list of available recipes
+        you can cook.
+      </p>
+      <p>
+        Alternatively, click the "Random Recipe" button to be given a completely
+        random recipe.
+      </p>
+      <p>If you're hungry for humour then ask for a random joke instead...</p>
+    </div>
+    <div class="input">
+      <input
+        type="text"
+        id="ingredientsInput"
+        placeholder="Press enter to add the ingredient..."
+      />
+      <button id="submitIngredients">Search For Recipes</button>
+      <button id="randomRecipe">Random Recipe</button>
+      <button id="randomJoke">Random Food Joke</button>
+    </div>
+    <div id="ingredientsDisplay" class="ingredientsDisplay"></div>
+    <div id="top" class="recipeDisplay"></div>
+  </body>
+</html>
