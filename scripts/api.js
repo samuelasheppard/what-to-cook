@@ -18,7 +18,6 @@ export class Api {
     try {
       const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${holder}&number=10&ranking=2&ignorePantry=true&sort=min-missing-ingredients&apiKey=${this.key}`;
       const recipes = await axios.get(url);
-      console.log(recipes);
       return this.splitSearchRecipe(recipes.data);
     } catch (error) {}
   }
