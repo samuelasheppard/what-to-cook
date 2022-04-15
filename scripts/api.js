@@ -1,6 +1,6 @@
 export class Api {
   constructor() {
-    this.key = "fae9dea0169f4a4e9eb2d34aa24de7ed";
+    this.key = "4908b6a9cb05447eb3b95661f4521766";
     //https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=API-KEY
   }
 
@@ -14,9 +14,11 @@ export class Api {
 
   async searchIngredients(ingredients) {
     const holder = ingredients.join(",+");
+
     try {
       const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${holder}&number=10&ranking=2&ignorePantry=true&sort=min-missing-ingredients&apiKey=${this.key}`;
       const recipes = await axios.get(url);
+      console.log(recipes);
       return this.splitSearchRecipe(recipes.data);
     } catch (error) {}
   }
