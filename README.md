@@ -1,5 +1,5 @@
-# recipe-app
-Recipe App
+# What to cook
+What to cook
 
 A recipe app that allows you to search recipes by ingredients, display random recipes and give (hilarious) food related jokes.
 
